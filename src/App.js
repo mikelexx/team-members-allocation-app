@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Content from "./Content";
+import EmployeeList from "./EmployeeList";
+import Footer from "./Footer";
+import { useState } from "react";
+import { employeeList } from './EmployeesData'
+import Header from "./Header";
+
+
 
 function App() {
+  const [selectedTeam,setSelectedTeam] =useState("Team B")
+  const [employeesList,setEmployeesList] = useState(employeeList)
+  const teamCount = employeesList.filter(employee=>employee.teamName===selectedTeam).length
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Header selectedTeam={selectedTeam} teamCount={teamCount}/>
+   <EmployeeList setEmployeesList={setEmployeesList} employeesList = {employeesList} selectedTeam ={selectedTeam} setSelectedTeam={setSelectedTeam}/>
+   <Content/>
+   <Footer/>
+   </>
   );
 }
 
