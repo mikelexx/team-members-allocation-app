@@ -1,8 +1,6 @@
 
-
 import Employee from './Employee'
 import './App.css'
-
 
 export default function EmployeeList({employeesList,setEmployeesList,selectedTeam,setSelectedTeam}) {
 
@@ -11,6 +9,7 @@ export default function EmployeeList({employeesList,setEmployeesList,selectedTea
         
 
   }
+  
 
 
   return (
