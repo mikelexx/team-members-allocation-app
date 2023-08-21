@@ -1,4 +1,4 @@
-export const employeeList = [
+export const employeesData = [
     {id:1,
     fullName:"Bobs Jone",
     designation:"Javascript Developer",

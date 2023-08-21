@@ -16,3 +16,8 @@
     justify-content:center;
     align-items: center;
 }
+@media only  screen  and (max-width:600px){
+    .card-collections{
+        grid-template-columns: 1fr;
+    }
+}
